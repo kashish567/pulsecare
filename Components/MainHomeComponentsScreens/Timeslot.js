@@ -6,7 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import Colors from '../../Shared/Colors';
 
 // Define TimeSlots screen
-function TimeSlotsScreen({ navigation }) {
+export default function TimeSlotsScreen({ navigation }) {
     const [selectedTimeSlot, setSelectedTimeSlot] = useState(null);
     const [patientId, setPatientId] = useState(''); // Assuming you have a way to retrieve the patient ID
     const doctorId = 'YOUR_DOCTOR_ID'; // You can replace this with the actual doctor ID
@@ -64,73 +64,6 @@ function TimeSlotsScreen({ navigation }) {
     );
 }
 
-// Define DoctorList screen
-function DoctorList({ navigation }) {
-    const doctorDemo = [
-        {
-            id: 1,
-            name: 'Hospitals',
-            value: 'hospital',
-            icon: require('../../assets/bg.jpg')
-        },
-        {
-            id: 2,
-            name: 'Doctors',
-            value: 'doctor',
-            icon: require('../../assets/bg.jpg')
-        },
-        {
-            id: 3,
-            name: 'Pharmacy',
-            value: 'pharmacy',
-            icon: require('../../assets/bg.jpg')
-        },
-        {
-            id: 4,
-            name: 'Dentists',
-            value: 'dentist',
-            icon: require('../../assets/bg.jpg')
-        },
-    ];
-
-    return (
-        <View>
-            <Text style={{ fontSize: 20, marginBottom: 15, marginTop: 10 }}>Book Instantly</Text>
-            <FlatList
-                data={doctorDemo}
-                showsHorizontalScrollIndicator={false}
-                renderItem={({ item }) => (
-                    <TouchableOpacity onPress={() => navigation.navigate('TimeSlots')}>
-                        <View style={styles.container}>
-                            <Image source={item.icon} style={styles.imageStyle} />
-                            <View style={{ display: 'flex', gap: 5 }} >
-                                <Text style={{ fontSize: 15, color: Colors.grey }}>{item.id}</Text>
-                                <Text style={{ fontSize: 19, fontWeight: 'bold' }}>{item.value}</Text>
-                                <Text style={{ fontSize: 16, color: Colors.grey, fontWeight: 'bold' }}>{item.name}</Text>
-                                <Text style={{ fontSize: 15, backgroundColor: Colors.primary, color: Colors.white, padding: 7, borderRadius: 5 }}>Book Appointment</Text>
-                            </View>
-                        </View>
-                    </TouchableOpacity>
-                )}
-            />
-        </View>
-    );
-}
-
-// Stack Navigator
-const Stack = createStackNavigator();
-
-// Main component
-export default function App() {
-    return (
-        <NavigationContainer>
-            <Stack.Navigator>
-                <Stack.Screen name="DoctorList" component={DoctorList} />
-                <Stack.Screen name="TimeSlots" component={TimeSlotsScreen} />
-            </Stack.Navigator>
-        </NavigationContainer>
-    );
-}
 
 const styles = StyleSheet.create({
     imageStyle: {
