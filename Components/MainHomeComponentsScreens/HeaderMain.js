@@ -1,17 +1,19 @@
 import { View, Text, StyleSheet,Image, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useContext } from 'react'
 import Colors from '../../Shared/Colors'
 import { MaterialIcons } from '@expo/vector-icons';
+import { AuthContext } from '../../Context/userLocationContext';
 
 export default function HeaderMain({navigation}) {
+  const [state] = useContext(AuthContext);
   return (
     <View style={styles.container}>
         <View style={styles.profileMainContainer} >
       <View style={styles.profileContainer} >
-          <Image source={require("../../assets/favicon.png")}  style={styles.userImageStyle} />
+          <Image source={require("../../assets/logo.png")}  style={styles.userImageStyle} />
         <View>
           <Text style={{color:"white"}} >Welcome, </Text>
-          <Text style={{color:"white",fontSize:20}} >Meet Dodiya</Text>
+          <Text style={{color:"white",fontSize:20}} >{state.user.first_name} {state.user.last_name} </Text>
         </View>
         </View>
         <TouchableOpacity onPress={() => navigation.navigate("Account")} >

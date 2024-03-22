@@ -6,9 +6,9 @@ import { ThemedButton } from 'react-native-really-awesome-button'
 import Toast from 'react-native-toast-message';
 import axios from 'axios'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import { AuthContext } from '../../Context/userLocationContext'
+import { AuthContext } from '../../../Context/userLocationContext'
 
-export default function Login({navigation}) {
+export default function DoctorLogin({navigation}) {
 
   const[state,setState] = useContext(AuthContext)
   const [email,setEmail] = useState("");
@@ -24,7 +24,7 @@ export default function Login({navigation}) {
         return
       }
 
-      const {data} = await axios.post('/auth/login',{
+      const {data} = await axios.post('/auth/doctor',{
         email,password
       });
 
@@ -52,9 +52,6 @@ export default function Login({navigation}) {
     <View>
     <LinearGradient colors={[Colors.primary,Colors.secondary]} start={{x:0,y:0}} end={{x:1,y:0}} style={styles.main} >
       <Text style={styles.header}>Pulse Care</Text>
-      <Text style={{color: Colors.white,
-    fontSize: 31,
-    fontWeight: 'bold',}}>Login</Text> 
     </LinearGradient>
     <View style={styles.formStyle} >
       <Text style={styles.formHeading} >Login</Text>

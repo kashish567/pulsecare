@@ -3,11 +3,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Register from './Screens/Auth/Register';
 import Login from './Screens/Auth/Login';
 import Welcome from './Screens/Welcome';
-import Otp from './Screens/Auth/Otp';
 import { AuthContext } from './Context/userLocationContext';
 import UserAccount from './Screens/UserAccount';
 import TabNavigation from './GoogleMapIntegration/MapComponents/TabNavigation';
-import HeaderMain from './Components/MainHomeComponentsScreens/HeaderMain';
+import DoctorRegister from './Screens/Auth/doctorAuth/DoctorRegister';
 
 export default function MainAppNavigation() {
 
@@ -28,8 +27,8 @@ export default function MainAppNavigation() {
         <>
         <Stack.Screen name='Welcome' component={Welcome} options={{headerShown:false}}  />
         <Stack.Screen name='Register' component={Register} options={{headerShown:false}}/>
+        <Stack.Screen name='DoctorRegister' component={DoctorRegister} options={{headerShown:false}}  />
         <Stack.Screen name='Login' component={Login} options={{headerShown:false}}  />
-        <Stack.Screen name='Otp' component={Otp} options={{headerShown:false}} />    
         </>
         )
       }

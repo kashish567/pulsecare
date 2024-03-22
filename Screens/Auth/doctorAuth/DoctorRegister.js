@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Dimensions, TextInput, Pressable, KeyboardAvoidingView, TouchableOpacity } from 'react-native';
-import Colors from '../../Shared/Colors';
+import { View, Text, StyleSheet, Dimensions, TextInput, Pressable, KeyboardAvoidingView, ScrollView,TouchableOpacity } from 'react-native';
+import Colors from '../../../Shared/Colors';
 import { LinearGradient } from 'expo-linear-gradient';
 import { ThemedButton } from 'react-native-really-awesome-button';
 import Toast from 'react-native-toast-message';
 import axios from 'axios';
 
-export default function Register({ navigation }) {
+export default function DoctorRegister({ navigation }) {
   const [first_name, setFirstName] = useState('');
   const [last_name, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -24,7 +24,7 @@ export default function Register({ navigation }) {
         return;
       }
 
-      const { data } = await axios.post('/auth/signup/patient', {
+      const { data } = await axios.post('/auth/signup/doctor', {
         first_name,
         last_name,
         email,
@@ -56,7 +56,7 @@ export default function Register({ navigation }) {
         return;
       }
 
-      const { data } = await axios.post('/auth/verify-otp/patient', {
+      const { data } = await axios.post('/auth/verify-otp/doctor', {
         first_name,
         last_name,
         email,
@@ -80,22 +80,23 @@ export default function Register({ navigation }) {
   };
 
   return (
+    <ScrollView>
     <KeyboardAvoidingView behavior="">
       <LinearGradient colors={[Colors.primary, Colors.secondary]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} style={styles.main}>
         <Text style={styles.header}>Pulse Care</Text>
         <Text style={{color: Colors.white,
     fontSize: 31,
-    fontWeight: 'bold',}}>User Registration</Text> 
+    fontWeight: 'bold',}}>Doctor Registration</Text> 
       </LinearGradient>
       <View style={styles.formStyle}>
-        <View style={{display:"flex",flexDirection:'row', justifyContent:'space-evenly',margin:5}} >
+      <View style={{display:"flex",flexDirection:'row', justifyContent:'space-evenly',margin:5}} >
         <View style={{backgroundColor:Colors.primary,padding:10,borderRadius:50 }} >
+        <TouchableOpacity onPress={() => navigation.navigate('Register')} >
           <Text style={styles.formHeading}>User Register</Text>
+        </TouchableOpacity>
         </View>
         <View style={{backgroundColor:Colors.primary,padding:10,borderRadius:50 }} >
-          <TouchableOpacity onPress={() => navigation.navigate('DoctorRegister')} >
             <Text style={styles.formHeading}>Doctor Register</Text>
-          </TouchableOpacity>
         </View>
         </View>
         <View style={{ marginVertical: 10 }}>
@@ -117,7 +118,7 @@ export default function Register({ navigation }) {
         {showOTPField && (
           <View style={{ marginVertical: 10 }}>
             <Text style={styles.textFieldLabel}>OTP</Text>
-            <TextInput placeholder="Enter OTP" placeholderTextColor={Colors.secondary} keyboardType="number-pad" value={enteredOTP} onChangeText={(text) => setEnteredOTP(text)} style={styles.textFieldStyle} />
+            <TextInput placeholder="Enter the OTP Received" placeholderTextColor={Colors.secondary} keyboardType="number-pad" value={enteredOTP} onChangeText={(text) => setEnteredOTP(text)} style={styles.textFieldStyle} />
           </View>
         )}
         <View style={{ marginTop: 25 }}>
@@ -133,6 +134,7 @@ export default function Register({ navigation }) {
         </View>
       </View>
     </KeyboardAvoidingView>
+    </ScrollView>
   );
 }
 

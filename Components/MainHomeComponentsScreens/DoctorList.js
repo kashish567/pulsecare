@@ -1,7 +1,8 @@
 import { View, Text, FlatList, TouchableOpacity, Image,StyleSheet } from 'react-native'; // Import Image from 'react-native'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Colors from '../../Shared/Colors';
 import Button, { ThemedButton } from 'react-native-really-awesome-button';
+import axios from 'axios';
 
 export default function DoctorList() {
     const doctorDemo = [
@@ -30,6 +31,22 @@ export default function DoctorList() {
             icon: require('../../assets/bg.jpg')
         },
     ];
+
+    const [doctor,setDoctor] = useState([])
+
+    const getAllDoctor = async () => {
+        try{
+            const {data} = await axios.get('/appointment/doctors');
+            setDoctor(data)
+        }catch(error){
+            console.log(error)
+        }
+    }
+
+    useEffect(() => {
+        getAllDoctor()
+    },[])
+
   return (
     <View>
     <Text style={{ fontSize: 20,marginBottom:15,marginTop:10 }}>Book Instantly</Text>

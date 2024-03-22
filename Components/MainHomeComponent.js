@@ -10,15 +10,15 @@ import { CurrentUserContext } from '../Context/currentUser'
 export default function MainHomeComponent({navigation}) {
 
   const [state] = useContext(AuthContext);
-  const [user] = useContext(CurrentUserContext)
-
+  // const [user] = useContext(CurrentUserContext)
+  console.log(state)
   return (
     <View>
       <ScrollView>
       <HeaderMain navigation={navigation}/>
           <View style={{padding:20}} >
           <Text>{JSON.stringify(state,null,4)}</Text>
-          <Text>{JSON.stringify(user,null,4)}</Text>
+          <Text>{JSON.stringify(state.user,null,4)}</Text>
             <Slider/>
             <TherapyCategory/>
             <DoctorList/>

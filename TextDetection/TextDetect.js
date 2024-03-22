@@ -80,7 +80,7 @@ export default function TextDetect({navigation}) {
     }
 
   return (
-    <View>
+    <ScrollView>
         <HeaderMain navigation={navigation}/>
 <ScrollView>
     <View style={styles.container} >
@@ -115,7 +115,7 @@ export default function TextDetect({navigation}) {
       }
     </View>
     </ScrollView>
-    </View>
+    </ScrollView>
   )
 }
 
