@@ -10,14 +10,14 @@ export default function HeaderMain({navigation}) {
     <View style={styles.container}>
         <View style={styles.profileMainContainer} >
       <View style={styles.profileContainer} >
-          <Image source={require("../../assets/logo.png")}  style={styles.userImageStyle} />
+          <Image source={require("../../assets/logo.jpg")}  style={styles.userImageStyle} />
         <View>
           <Text style={{color:"white"}} >Welcome, </Text>
           <Text style={{color:"white",fontSize:20}} >{state.user.first_name} {state.user.last_name} </Text>
         </View>
         </View>
         <TouchableOpacity onPress={() => navigation.navigate("Account")} >
-          <MaterialIcons name='account-circle' color="white" size={35} />
+          <MaterialIcons name='account-circle' color="white" size={45} />
         </TouchableOpacity>
         </View>
       </View>
@@ -33,15 +33,15 @@ const styles = StyleSheet.create({
         borderBottomRightRadius:25
       },
       userImageStyle:{
-        width:45,
-        height:45,
+        width:60,
+        height:50,
         borderRadius:99
       },
       profileContainer:{
         display:'flex',
         flexDirection:'row',
         alignItems:'center',
-        gap:10
+        gap:5
       },
       profileMainContainer:{
         display:'flex',

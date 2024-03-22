@@ -60,14 +60,14 @@ export default function Login({navigation}) {
       <Text style={styles.formHeading} >Login</Text>
       <View style={{marginVertical:10}} >
         <Text style={styles.textFieldLabel} >Email Id</Text>
-        <TextInput placeholder='Your Email' placeholderTextColor={Colors.primary} keyboardType='default' value={email} onChangeText={(text) => setEmail(text)} style={styles.textFieldStyle} />
+        <TextInput placeholder='Your Email' placeholderTextColor={Colors.secondary} keyboardType='default' value={email} onChangeText={(text) => setEmail(text)} style={styles.textFieldStyle} />
       </View>
       <View style={{marginVertical:10}} >
         <Text style={styles.textFieldLabel} >Password</Text>
-        <TextInput placeholder='Your password' placeholderTextColor={Colors.primary} keyboardType='default' secureTextEntry={true} value={password} onChangeText={(text) => setPassword(text)} style={styles.textFieldStyle} />
+        <TextInput placeholder='Your password' placeholderTextColor={Colors.secondary} keyboardType='default' secureTextEntry={true} value={password} onChangeText={(text) => setPassword(text)} style={styles.textFieldStyle} />
       </View>
       <View style={{marginTop:25}}>
-        <ThemedButton name="rick" type="secondary" borderRadius={10} width={'100%'} onPress={handleSubmit} >Login</ThemedButton>
+        <ThemedButton name="rick" type="twitter" borderRadius={10} width={'100%'} onPress={handleSubmit} >Login</ThemedButton>
       </View>
       <View style={styles.registerAccount}>
         <Text style={{fontSize: 16,color: Colors.primary}}>Don't have an account ?</Text>
@@ -89,12 +89,12 @@ const styles = StyleSheet.create({
   },
   textFieldLabel:{
     fontSize:16,
-    color:Colors.secondary
+    color:Colors.primary
   },
   formHeading:{
-    fontSize:19,
+    fontSize:25,
     fontWeight:'bold',
-    color:Colors.secondary,
+    color:Colors.primary,
     textAlign:"center"
   },
   formStyle:{
