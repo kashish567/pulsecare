@@ -7,28 +7,39 @@ export default function TherapyCategory() {
     const categoryList = [
         {
             id: 1,
-            name: 'Hospitals',
+            name: 'Dental',
             value: 'hospital',
-            icon: require('../../assets/favicon.png')
+            icon: require('../../assets/typesthearpy/cat1.png')
         },
         {
             id: 2,
-            name: 'Doctors',
+            name: 'Therapy',
             value: 'doctor',
-            icon: require('../../assets/favicon.png')
+            icon: require('../../assets/typesthearpy/cat2.png')
         },
         {
             id: 3,
-            name: 'Pharmacy',
+            name: 'Skin Care',
             value: 'pharmacy',
-            icon: require('../../assets/favicon.png')
+            icon: require('../../assets/typesthearpy/cat3.png')
         },
         {
             id: 4,
-            name: 'Dentists',
-            value: 'dentist',
-            icon: require('../../assets/favicon.png')
+            name: 'Skin Care',
+            value: 'pharmacy',
+            icon: require('../../assets/typesthearpy/cat3.png')
+        },{
+            id: 5,
+            name: 'Skin Care',
+            value: 'pharmacy',
+            icon: require('../../assets/typesthearpy/cat3.png')
         },
+        // {
+        //     id: 4,
+        //     name: 'Dentists',
+        //     value: 'dentist',
+        //     icon: require('../../assets/typesthearpy/type4.jpg')
+        // },
     ];
 
     const [category,setCategory] = useState([])
@@ -42,7 +53,7 @@ export default function TherapyCategory() {
     },[])
     return (
         <View style={{ marginTop: 15 }}>
-            <Text style={{ fontSize: 20 }}>Wide Categories</Text>
+            <Text style={{ fontSize: 20,fontWeight:'bold' }}>Wide Categories</Text>
             <FlatList
                 data={categoryList}
                 horizontal={true}

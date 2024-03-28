@@ -3,8 +3,11 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import * as ImagePicker from 'expo-image-picker'
 import * as FileSystem from 'expo-file-system'
-import LabelDetect from './LabelDetect'
 import HeaderMain from '../Components/MainHomeComponentsScreens/HeaderMain'
+import { Entypo } from '@expo/vector-icons';
+import Colors from '../Shared/Colors'
+import { FontAwesome } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
 
 export default function TextDetect({navigation}) {
     const [imageUri,setImageUri] = useState(null)
@@ -85,21 +88,27 @@ export default function TextDetect({navigation}) {
 <ScrollView>
     <View style={styles.container} >
     <Text style={styles.title}>Detect Text</Text>
+      <View style={{display:'flex',flexDirection:'row',justifyContent:"space-between"}}>
+
+      <TouchableOpacity onPress={pickImage} style={styles.button}>
+        <Entypo name="folder-images" size={50} color={Colors.white} />
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={takePhoto} style={styles.button}>
+        <FontAwesome name="camera-retro" size={50} color={Colors.white} />
+      </TouchableOpacity>
+      </View>
+
       {imageUri && (
         <Image source={{uri:imageUri}} style={styles.imageStyle} />
       )}
-      <TouchableOpacity onPress={pickImage} style={styles.button}>
-        <Text style={styles.text} >Choose an Image...</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={takePhoto} style={styles.button}>
-        <Text style={styles.text} >Take Photo ...</Text>
-      </TouchableOpacity>
+
       <TouchableOpacity onPress={analyzeImage} style={styles.button}>
-        <Text style={styles.text} >Analyze this Image...</Text>
+        <Text style={styles.text} >Analyze Image</Text>
       </TouchableOpacity>
       {
-        texts.length>0 && (
-            <View>  
+        texts.length>20 && (
+            <View style={{padding:12,backgroundColor:Colors.primary,borderRadius:15,marginTop:10}}>  
                 <Text style={styles.textPara} >
                     Image Contains the following texts : 
                 </Text>
@@ -127,30 +136,36 @@ const styles = StyleSheet.create({
         fontSize:35,
         fontWeight:'bold',
         marginBottom:50,
-        marginTop:100
+        marginTop:20
     },
     imageStyle:{
-        width:300,
-        height:300
+        width:250,
+        height:250,
+        borderRadius:15,
+        marginTop:15
     },
     button:{
-        backgroundColor:"#DDDDDD",
-        padding:10,
+        backgroundColor:Colors.primary,
+        padding:20,
         marginBottom:10,
-        marginTop:20,
+        margin:20,
         borderRadius:10
     },  
     text:{
         fontSize:20,
+        color:Colors.white,
         fontWeight:'bold'
     },
     textPara:{
-        fontSize:20,
+        fontSize:21,
         fontWeight:'bold',
-        marginTop:25
+        marginTop:25,
+        marginBottom:15,
+        color:Colors.white
     },
     outputText:{
         fontSize:18,
-        marginBottom:15
+        marginBottom:15,
+        color:Colors.white
     }
 })

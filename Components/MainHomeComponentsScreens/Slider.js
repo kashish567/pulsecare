@@ -7,30 +7,30 @@ export default function Slider() {
             id: 1,
             name: 'Hospitals',
             value: 'hospital',
-            icon: require('../../assets/dr.webp')
+            icon: require('../../assets/typesCategory/banner1.jpg')
         },
         {
             id: 2,
             name: 'Doctors',
             value: 'doctor',
-            icon: require('../../assets/bg.jpg')
+            icon: require('../../assets/typesCategory/banner2.jpg')
         },
         {
             id: 3,
             name: 'Pharmacy',
             value: 'pharmacy',
-            icon: require('../../assets/demo.jpg')
+            icon: require('../../assets/typesCategory/banner3.jpg')
         },
         {
             id: 4,
             name: 'Dentists',
             value: 'dentist',
-            icon: require('../../assets/demo1.jpg')
+            icon: require('../../assets/typesCategory/banner2.jpg')
         },
     ];
   return (
     <View>
-        <Text style={{fontSize:20,marginBottom:10}} >Best of All</Text>
+        <Text style={{fontSize:20,marginBottom:10,fontWeight:'bold'}} >Latest by PulseCare</Text>
         <FlatList 
             data={sliderData}  
             horizontal={true}
@@ -47,8 +47,8 @@ export default function Slider() {
 
 const styles = StyleSheet.create({
     imageStyle:{
-        width:290,
-        height:160,
+        width:300,
+        height:170,
         borderRadius:20,
         objectFit:'cover'
     }

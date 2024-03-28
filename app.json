@@ -46,6 +46,12 @@
           "microphonePermission": "Allow Pulsecare to access the microphone",
           "speechRecognitionPermission": "Allow Pulsecare to securely recognize user speech"
         }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photo gallery for profile update."
+        }
       ]
     ]
   }

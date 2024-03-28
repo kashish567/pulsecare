@@ -7,6 +7,9 @@ import { AuthContext } from './Context/userLocationContext';
 import UserAccount from './Screens/UserAccount';
 import TabNavigation from './GoogleMapIntegration/MapComponents/TabNavigation';
 import DoctorRegister from './Screens/Auth/doctorAuth/DoctorRegister';
+import Appoinment from './Screens/Appoinment';
+import DoctorList from './Components/MainHomeComponentsScreens/DoctorList';
+import Feedback from './Screens/Feedback';
 
 export default function MainAppNavigation() {
 
@@ -22,6 +25,9 @@ export default function MainAppNavigation() {
         <>
         <Stack.Screen name='HomScreen' component={TabNavigation} options={{headerShown:false}} />
         <Stack.Screen name='Account' component={UserAccount} options={{headerShown:false}} />
+        <Stack.Screen name='Appointment' component={Appoinment} options={{headerShown:false}} />
+        <Stack.Screen name='DoctorList' component={DoctorList} options={{headerShown:false}} />
+        <Stack.Screen name='Feedback' component={Feedback} options={{headerShown:false}} />
         </> 
         ) : (
         <>

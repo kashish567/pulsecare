@@ -17,7 +17,7 @@ export default function HeaderMain({navigation}) {
         </View>
         </View>
         <TouchableOpacity onPress={() => navigation.navigate("Account")} >
-          <MaterialIcons name='account-circle' color="white" size={45} />
+          <Image source={{uri:state.user.profile_picture}}  style={styles.userImageStyle} />
         </TouchableOpacity>
         </View>
       </View>
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         borderBottomRightRadius:25
       },
       userImageStyle:{
-        width:60,
+        width:50,
         height:50,
         borderRadius:99
       },
