@@ -82,26 +82,21 @@ export default function Welcome({navigation}) {
                         fontSize: 50,
                         fontWeight: 800,
                         color: Colors.white
-                    }}>Let's Get</Text>
-                    <Text style={{
-                        fontSize: 46,
-                        fontWeight: 800,
-                        color: Colors.white
-                    }}>Started</Text>
+                    }}>Pulse Care :)</Text>
 
 <View style={{ marginVertical: 22 }}>
                         <Text style={{
                             fontSize: 16,
                             color: Colors.white,
                             marginVertical: 4
-                        }}>Connect with each other with chatting</Text>
+                        }}>Connect with your favorite doctors !</Text>
                         <Text style={{
                             fontSize: 16,
                             color: Colors.white,
-                        }}>Calling, Enjoy Safe and private texting</Text>
+                        }}>PulseCare provides Safe and private ecosystem</Text>
                     </View>
                     <View>
-                    <ThemedButton name="rick" type="secondary" borderRadius={10} width={'100%'} onPress={() => navigation.navigate('Register')} >Join Now</ThemedButton>
+                    <ThemedButton name="rick" type="twitter" borderRadius={10} width={'100%'} onPress={() => navigation.navigate('Register')} >Join Now</ThemedButton>
                     </View>
                     <View style={{
                         flexDirection: "row",

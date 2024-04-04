@@ -1,56 +1,39 @@
 import { View, Text, FlatList, TouchableOpacity, Image } from 'react-native'; // Import Image from 'react-native'
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Colors from '../../Shared/Colors';
-import axios from 'axios';
 
 export default function TherapyCategory() {
     const categoryList = [
         {
             id: 1,
-            name: 'Dental',
+            name: 'Period doubts',
             value: 'hospital',
-            icon: require('../../assets/typesthearpy/cat1.png')
+            icon: require('../../assets/typesthearpy/cat7.png')
         },
         {
             id: 2,
-            name: 'Therapy',
+            name: 'Anxiety',
             value: 'doctor',
-            icon: require('../../assets/typesthearpy/cat2.png')
+            icon: require('../../assets/typesthearpy/cat6.png')
         },
         {
             id: 3,
-            name: 'Skin Care',
+            name: 'Cold / cough',
             value: 'pharmacy',
-            icon: require('../../assets/typesthearpy/cat3.png')
+            icon: require('../../assets/typesthearpy/cat5.png')
         },
         {
             id: 4,
-            name: 'Skin Care',
+            name: 'Cardio Help',
             value: 'pharmacy',
-            icon: require('../../assets/typesthearpy/cat3.png')
+            icon: require('../../assets/typesthearpy/cat4.png')
         },{
             id: 5,
-            name: 'Skin Care',
+            name: 'Therapies',
             value: 'pharmacy',
-            icon: require('../../assets/typesthearpy/cat3.png')
-        },
-        // {
-        //     id: 4,
-        //     name: 'Dentists',
-        //     value: 'dentist',
-        //     icon: require('../../assets/typesthearpy/type4.jpg')
-        // },
+            icon: require('../../assets/typesthearpy/cat2.png')
+        }
     ];
-
-    const [category,setCategory] = useState([])
-
-    const getAllCategory = async () => {
-        const {data} = await axios.get("")
-    }
-
-    useEffect(() => {
-        getAllCategory()
-    },[])
     return (
         <View style={{ marginTop: 15 }}>
             <Text style={{ fontSize: 20,fontWeight:'bold' }}>Wide Categories</Text>
@@ -69,7 +52,7 @@ export default function TherapyCategory() {
                             width: 90,
                             height: 90,
                             justifyContent: 'center',
-                            borderRadius: 50,
+                            borderRadius: 15,
                             backgroundColor: Colors.primary,
                         }}>
                             <Image source={item.icon}

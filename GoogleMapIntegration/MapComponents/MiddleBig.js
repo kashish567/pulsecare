@@ -13,7 +13,7 @@ export default function MiddleBig({ place }) {
             "?maxwidth=400" +
             "&photo_reference=" +
             place?.photos[0]?.photo_reference +
-            "&key=AIzaSyAOlGVaAlNnI26UtG-nnLhxdzg4_so-bzw",
+            "&key=AIzaSyBuzdncg4T0lTNQ_UQyDuLzrIMyD_GvQwA",
         }}
         style={{ width: "100%", height: 160, borderRadius: 15 }}
       />:<Image source={require('../../assets/defaultImage/hospitalBuilding.png')}

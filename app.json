@@ -22,7 +22,13 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "googleMapsApiKey": ""
+      "googleMapsApiKey": "",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.meetdod.client"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -53,6 +59,11 @@
           "photosPermission": "The app accesses your photo gallery for profile update."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "f4be0c81-625f-4892-95ac-7f4e23e472d3"
+      }
+    }
   }
 }

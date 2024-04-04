@@ -19,37 +19,37 @@ export default function TabNavigation() {
         <Tab.Screen name='Home' component={MainHomeComponent} options={{
             tabBarLabel:'Home',
             tabBarIcon : ({color}) => (
-                <MaterialIcons name='home' color={color} size={35} />
+                <MaterialIcons name='home' color={color} size={30} />
             )
         }} />
         <Tab.Screen name='My_Appoinments' component={AppoinmentsFetched} options={{
             tabBarLabel:'Appoinments',
             tabBarIcon : ({color}) => (
-                <MaterialIcons name='approval' color={color} size={35} />
+                <MaterialIcons name='approval' color={color} size={30} />
             )
         }} />
         <Tab.Screen name='Map' component={HomeNavigation} options={{
             tabBarLabel:'Map',
             tabBarIcon : ({color}) => (
-                <MaterialIcons name='map' color={color} size={35} />
+                <MaterialIcons name='map' color={color} size={30} />
             )
         }} />
         <Tab.Screen name='Search' component={SearchMap} options={{
             tabBarLabel:'Search',
             tabBarIcon : ({color}) => (
-                <MaterialIcons name='search' color={color} size={35} />
+                <MaterialIcons name='search' color={color} size={30} />
             )
         }} />
         <Tab.Screen name='Text' component={TextDetect} options={{
             tabBarLabel:'Detect',
             tabBarIcon : ({color}) => (
-                <MaterialIcons name='camera' color={color} size={35} />
+                <MaterialIcons name='camera' color={color} size={30} />
             )
         }} />
         <Tab.Screen name='Chat' component={ChatBot} options={{
             tabBarLabel:'Chat',
             tabBarIcon : ({color}) => (
-                <MaterialCommunityIcons name="robot-excited-outline" color={color} size={35} />            )
+                <MaterialCommunityIcons name="robot-excited-outline" color={color} size={30} />            )
         }} />
     </Tab.Navigator>
   )

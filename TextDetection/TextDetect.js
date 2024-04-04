@@ -1,4 +1,4 @@
-import { View, Text,StyleSheet, TouchableOpacity,Image, ScrollView } from 'react-native'
+import { View, Text,StyleSheet, TouchableOpacity,Image, ScrollView,ActivityIndicator } from 'react-native'
 import React, { useState } from 'react'
 import axios from 'axios'
 import * as ImagePicker from 'expo-image-picker'
@@ -12,6 +12,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 export default function TextDetect({navigation}) {
     const [imageUri,setImageUri] = useState(null)
     const [texts,setTexts] = useState([])
+    const [isLoading, setIsLoading] = useState(false); // State variable for loading indicator
 
     const pickImage = async () => {
         try{
@@ -49,12 +50,13 @@ export default function TextDetect({navigation}) {
 
     const analyzeImage = async () => {
         try{
+            setIsLoading(true); 
             if(!imageUri){
                 alert('Please Select a Image !');
                 return
             }
 
-            const apiKeyText = "AIzaSyCzfD3QlEuAmRY6C_WM-AQJftEUJR4dZlo";
+            const apiKeyText = "AIzaSyC4_6ryHoUz1ONGGhUZNtuqj2d_HfgLVWs";
             const apiURL = "https://vision.googleapis.com/v1/images:annotate?key="+apiKeyText;
 
             const readImage = await FileSystem.readAsStringAsync(imageUri,{
@@ -77,7 +79,9 @@ export default function TextDetect({navigation}) {
             const apiResult = await axios.post(apiURL,requestData);
             setTexts(apiResult.data.responses[0].textAnnotations);
             console.log(apiResult)
+            setIsLoading(false);
         }catch(error){
+            setIsLoading(false); 
             console.log("Error During analyzing the Image"+error);
         }
     }
@@ -106,8 +110,11 @@ export default function TextDetect({navigation}) {
       <TouchableOpacity onPress={analyzeImage} style={styles.button}>
         <Text style={styles.text} >Analyze Image</Text>
       </TouchableOpacity>
-      {
-        texts.length>20 && (
+      {isLoading ? (
+                        <View style={styles.loaderContainer}>
+                            <ActivityIndicator size="large" color={Colors.primary} />
+                        </View>
+                    ) : (
             <View style={{padding:12,backgroundColor:Colors.primary,borderRadius:15,marginTop:10}}>  
                 <Text style={styles.textPara} >
                     Image Contains the following texts : 
@@ -116,6 +123,7 @@ export default function TextDetect({navigation}) {
                     texts.map((texts) => (
                         <Text key={texts.mid} style={styles.outputText} >
                             {texts.description}
+                            {console.log(texts.description)}
                         </Text>
                     ))
                 }
@@ -135,7 +143,7 @@ const styles = StyleSheet.create({
     title:{
         fontSize:35,
         fontWeight:'bold',
-        marginBottom:50,
+        marginBottom:0,
         marginTop:20
     },
     imageStyle:{

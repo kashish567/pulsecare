@@ -15,7 +15,7 @@ style={{
 }}
 >
 {place?.photos?  <Image
-  source={{uri: "https://maps.googleapis.com/maps/api/place/photo"+"?maxwidth=400"+"&photo_reference="+place?.photos[0]?.photo_reference+"&key=AIzaSyAOlGVaAlNnI26UtG-nnLhxdzg4_so-bzw"}}
+  source={{uri: "https://maps.googleapis.com/maps/api/place/photo"+"?maxwidth=400"+"&photo_reference="+place?.photos[0]?.photo_reference+"&key=AIzaSyBuzdncg4T0lTNQ_UQyDuLzrIMyD_GvQwA"}}
   style={{ width: 110, height: 110, borderRadius: 15 }}
 />:
 <Image source={require('../../assets/defaultImage/hospitalBuilding.png')}

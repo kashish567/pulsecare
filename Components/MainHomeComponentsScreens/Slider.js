@@ -29,10 +29,11 @@ export default function Slider() {
         },
     ];
   return (
-    <View>
+    <View style={{marginBottom:10}}>
         <Text style={{fontSize:20,marginBottom:10,fontWeight:'bold'}} >Latest by PulseCare</Text>
         <FlatList 
             data={sliderData}  
+            style={{ marginTop: 3 }}
             horizontal={true}
             showsHorizontalScrollIndicator={false}
             renderItem={({item,index}) => (

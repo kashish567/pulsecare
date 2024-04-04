@@ -1,20 +1,25 @@
 import React, { useContext, useState } from 'react';
-import { View, Text, FlatList, TouchableOpacity, Image, StyleSheet, Pressable, Dimensions } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity, Image, StyleSheet, Pressable, Dimensions, ScrollView } from 'react-native';
 import Axios from 'axios'; 
 import Colors from '../Shared/Colors';
 import Toast from 'react-native-toast-message';
 import { Calendar } from 'react-native-calendars';
-import Header from '../GoogleMapIntegration/MapComponents/Header';
 import HeaderMain from '../Components/MainHomeComponentsScreens/HeaderMain';
 import { AuthContext } from '../Context/userLocationContext';
+import { AntDesign } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
+import { FontAwesome6 } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 
 export default function Appoinment({ navigation,route }) {
     const [selectedTimeSlot, setSelectedTimeSlot] = useState(null);
     const [selectedDateSlot, setselectedDateSlot] = useState(null);
     const [selected, setSelected] = useState('');
     const { doctor_id } = route.params;
+    const { doctor } = route.params;
     const [state] = useContext(AuthContext);
-    console.log(doctor_id)
+    console.log("Doctor ID",doctor_id)
 
     const handleSelectTimeSlot = (timeSlot) => {
         setSelectedTimeSlot(timeSlot);
@@ -53,13 +58,65 @@ export default function Appoinment({ navigation,route }) {
         { time: '9:00 AM' },
         { time: '10:00 AM' },
         { time: '11:00 AM' },
+        { time: '12:00 AM' },
     ];
 
     return (
-        <View style={{ justifyContent: 'center' }}>
+        <ScrollView>
+          <View style={{ justifyContent: 'center' }}>
         <HeaderMain navigation={navigation} />
             <View>
             <View style={styles.formStyle}>
+              <View style={{alignItems:'center',margin:7}} >
+                <Image source={{ uri: doctor.profile_picture }} style={{width: 145,height: 145,borderRadius: 100,marginBottom:10,borderColor: Colors.primary, borderWidth: 4}} />
+              </View>
+              <View style={{ flexDirection: 'row', alignItems: 'flex-start' }}>
+              <View style={{ width: 4, height: '100%', backgroundColor: Colors.primary, marginRight:10}} />
+  <View>
+    <Text style={{ fontSize: 22}}>
+      <MaterialCommunityIcons name="account-circle" size={24} color={Colors.primary} /> {" "}
+      {doctor.first_name} {doctor.last_name}
+    </Text>
+    <Text style={{ fontSize: 19, color: Colors.black, marginTop: 5 }}>
+      <FontAwesome5 name="briefcase-medical" size={20} color={Colors.primary} /> {"  "}
+      {doctor.specialization}
+    </Text>
+    <Text style={{ fontSize: 17, color: Colors.grey, marginTop: 5 }}>
+      <FontAwesome6 name="graduation-cap" size={20} color={Colors.primary} /> {"  "}
+      {doctor.education}
+    </Text>
+    <Text style={{ fontSize: 17, color: Colors.grey, marginTop: 5 }}>
+      <MaterialCommunityIcons name="file-certificate" size={24} color={Colors.primary} /> {"  "}
+      {doctor.certifications}
+    </Text>
+    <Text style={{ fontSize: 17, color: Colors.grey, marginTop: 5 }}>
+      <FontAwesome6 name="language" size={20} color={Colors.primary} /> {"  "}
+      {doctor.languages_spoken}
+    </Text>
+    <Text style={{ fontSize: 17, color: Colors.grey, marginTop: 5 }}>
+      <FontAwesome5 name="trophy" size={20} color={Colors.primary} /> {"  "}
+      {doctor.medical_achievements}
+    </Text>
+    <Text style={{ fontSize: 17, color: Colors.grey, marginTop: 5 }}>
+    <AntDesign name="star" size={20} color={Colors.primary} /> {"  "}
+      {doctor.average_rating}
+    </Text>
+    <Text style={{ fontSize: 17, color: Colors.grey, marginTop: 5 }}>
+    <AntDesign name="clockcircle" size={20} color={Colors.primary} /> {"  "}
+      {doctor.availability}
+    </Text>
+    <Text style={{ fontSize: 17, color: Colors.grey, marginTop: 5 }}>
+    <FontAwesome6 name="money-bill" size={20} color={Colors.primary} /> {"  "}
+      ₹ {doctor.consultation_fee}
+    </Text>
+    <Text style={{ fontSize: 17, color: Colors.grey, marginTop: 5 }}>
+    <FontAwesome name="calendar" size={24} color={Colors.primary} /> {"  "}
+      {doctor.years_of_experience} of Experience
+    </Text>
+  </View>
+</View>
+
+              <Text style={{ fontSize: 25, marginBottom: 15, marginTop: 30, fontWeight: 'bold',color:Colors.primary }}><AntDesign name="rightcircle" size={24} color={Colors.primary} /> Book Now</Text>
 
             <Calendar onDayPress={day => { setSelected(day.dateString);}}
       markedDates={{
@@ -67,8 +124,9 @@ export default function Appoinment({ navigation,route }) {
       }}
       
     />   
-        <View style={{display:"flex",flexDirection:'row', justifyContent:'space-evenly',margin:5}} >
-        <FlatList
+        <View style={{display:"flex",flexDirection:'row', justifyContent:'space-evenly',marginTop:10}} >
+
+<FlatList
                 data={timeSlots}
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}
@@ -82,6 +140,7 @@ export default function Appoinment({ navigation,route }) {
                 keyExtractor={(item) => item.time.toString()}
             />
         </View>
+
         <View style={styles.registerAccount}>
           <Pressable onPress={handleBookAppointment}>
             <Text style={styles.registerBold}>Book Appoinment</Text>
@@ -90,6 +149,7 @@ export default function Appoinment({ navigation,route }) {
       </View>
         </View>
         </View>
+        </ScrollView>
     );
 }
 

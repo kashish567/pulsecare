@@ -35,7 +35,9 @@ const styles = StyleSheet.create({
       userImageStyle:{
         width:50,
         height:50,
-        borderRadius:99
+        borderRadius:99,
+        borderWidth:2,
+        borderColor:Colors.white
       },
       profileContainer:{
         display:'flex',

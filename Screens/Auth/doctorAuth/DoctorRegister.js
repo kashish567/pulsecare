@@ -89,7 +89,7 @@ export default function DoctorRegister({ navigation }) {
     fontWeight: 'bold',}}>Doctor Registration</Text> 
       </LinearGradient>
       <View style={styles.formStyle}>
-      <View style={{display:"flex",flexDirection:'row', justifyContent:'space-evenly',margin:5}} >
+      <View style={{display:"flex",flexDirection:'row', justifyContent:'space-between',margin:5}} >
         <View style={{backgroundColor:Colors.primary,padding:10,borderRadius:50 }} >
         <TouchableOpacity onPress={() => navigation.navigate('Register')} >
           <Text style={styles.formHeading}>User Register</Text>
@@ -122,7 +122,7 @@ export default function DoctorRegister({ navigation }) {
           </View>
         )}
         <View style={{ marginTop: 25 }}>
-          <ThemedButton name="rick" type="secondary" onPress={showOTPField ? verifyOtp : handleSubmit} borderRadius={10} width="100%">
+          <ThemedButton name="rick" type="twitter" onPress={showOTPField ? verifyOtp : handleSubmit} borderRadius={10} width="100%">
             {showOTPField ? 'Verify OTP' : 'Register'}
           </ThemedButton>
         </View>
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.white,
     borderRadius: 10,
     margin: 10,
-    marginTop: -30,
+    marginTop: -15,
     paddingVertical: 20,
     paddingHorizontal: 15,
   },

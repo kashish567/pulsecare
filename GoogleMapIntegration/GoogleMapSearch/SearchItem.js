@@ -13,7 +13,7 @@ export default function SearchItem({place}) {
               "?maxwidth=400" +
               "&photo_reference=" +
               place?.photos[0]?.photo_reference +
-              "&key=AIzaSyAOlGVaAlNnI26UtG-nnLhxdzg4_so-bzw",
+              "&key=AIzaSyBuzdncg4T0lTNQ_UQyDuLzrIMyD_GvQwA",
           }}
           style={{width:120,height:80,borderRadius:10}} />
         :

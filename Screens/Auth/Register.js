@@ -85,10 +85,10 @@ export default function Register({ navigation }) {
         <Text style={styles.header}>Pulse Care</Text>
         <Text style={{color: Colors.white,
     fontSize: 31,
-    fontWeight: 'bold',}}>User Registration</Text> 
+    fontWeight: 'bold'}}>User Registration</Text> 
       </LinearGradient>
       <View style={styles.formStyle}>
-        <View style={{display:"flex",flexDirection:'row', justifyContent:'space-evenly',margin:5}} >
+        <View style={{display:"flex",flexDirection:'row', justifyContent:'space-between',margin:5}} >
         <View style={{backgroundColor:Colors.primary,padding:10,borderRadius:50 }} >
           <Text style={styles.formHeading}>User Register</Text>
         </View>
@@ -121,7 +121,7 @@ export default function Register({ navigation }) {
           </View>
         )}
         <View style={{ marginTop: 25 }}>
-          <ThemedButton name="rick" type="secondary" onPress={showOTPField ? verifyOtp : handleSubmit} borderRadius={10} width="100%">
+          <ThemedButton name="rick" type="twitter" onPress={showOTPField ? verifyOtp : handleSubmit} borderRadius={10} width="100%">
             {showOTPField ? 'Verify OTP' : 'Register'}
           </ThemedButton>
         </View>
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.white,
     borderRadius: 10,
     margin: 10,
-    marginTop: -30,
+    marginTop: -15,
     paddingVertical: 20,
     paddingHorizontal: 15,
   },

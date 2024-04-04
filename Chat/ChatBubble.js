@@ -20,6 +20,7 @@ export default function ChatBubble({role,text,onSpeech}) {
 const styles = StyleSheet.create({
   chatItem:{
     marginBottom:10,
+    marginTop:10,
     padding:10,
     borderRadius:10,
     maxWidth:"70%",

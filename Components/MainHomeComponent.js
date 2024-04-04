@@ -5,6 +5,7 @@ import Slider from './MainHomeComponentsScreens/Slider'
 import TherapyCategory from './MainHomeComponentsScreens/TherapyCategory'
 import DoctorList from './MainHomeComponentsScreens/DoctorList'
 import { AuthContext } from '../Context/userLocationContext'
+import EmergencyCall from './MainHomeComponentsScreens/EmergencyCall'
 
 export default function MainHomeComponent({navigation}) {
   const [state] = useContext(AuthContext);
@@ -12,7 +13,8 @@ export default function MainHomeComponent({navigation}) {
     <View>
       <ScrollView>
       <HeaderMain navigation={navigation}/>
-          <View style={{padding:20}} >
+          <View style={{padding:15}} >
+            <EmergencyCall/>
             <Slider/>
             <TherapyCategory/>
             <DoctorList navigation={navigation} />
