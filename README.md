@@ -12,4 +12,4 @@ In the current era, healthcare services are increasingly leveraging digital plat
 
 This application aims to enhance the healthcare experience by making it more efficient and user-friendly.
 
-![Home Screen](screenshots/pulseCareSS/welcome.jpg)
+![Home Screen](screenshot/pulseCareSS/welcome.jpg)
