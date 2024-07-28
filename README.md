@@ -12,5 +12,63 @@ In the current era, healthcare services are increasingly leveraging digital plat
 
 This application aims to enhance the healthcare experience by making it more efficient and user-friendly.
 
-<img src="screenshot/pulseCareSS/welcome.jpg" alt="Home Screen" height ="300" width="150"/>
-*Welcome screen of the application.*
+## Application Screenshots
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+
+  <div style="flex-basis: 30%;">
+    <img src="screenshot/pulseCareSS/welcome.jpg" alt="Welcome Screen" style="width: 100%;"/>
+    <p align="center">Welcome Screen</p>
+  </div>
+  
+  <div style="flex-basis: 30%;">
+    <img src="screenshot/pulseCareSS/userReg.jpg" alt="User Registration" style="width: 100%;"/>
+    <p align="center">User Registration</p>
+  </div>
+
+  <div style="flex-basis: 30%;">
+    <img src="screenshot/pulseCareSS/login.jpg" alt="Login Screen" style="width: 100%;"/>
+    <p align="center">Login Screen</p>
+  </div>
+
+  <div style="flex-basis: 30%;">
+    <img src="screenshot/pulseCareSS/homePage.jpg" alt="Home Page" style="width: 100%;"/>
+    <p align="center">Home Page</p>
+  </div>
+
+  <div style="flex-basis: 30%;">
+    <img src="screenshot/pulseCareSS/updateProfile1.jpg" alt="Update Profile" style="width: 100%;"/>
+    <p align="center">Update Profile</p>
+  </div>
+
+  <div style="flex-basis: 30%;">
+    <img src="screenshot/pulseCareSS/mapMain.jpg" alt="Map Main" style="width: 100%;"/>
+    <p align="center">Map Main</p>
+  </div>
+
+  <div style="flex-basis: 30%;">
+    <img src="screenshot/pulseCareSS/doctorList.jpg" alt="Doctor List" style="width: 100%;"/>
+    <p align="center">Doctor List</p>
+  </div>
+
+  <div style="flex-basis: 30%;">
+    <img src="screenshot/pulseCareSS/doctorDetails.jpg" alt="Doctor Details" style="width: 100%;"/>
+    <p align="center">Doctor Details</p>
+  </div>
+
+  <div style="flex-basis: 30%;">
+    <img src="screenshot/pulseCareSS/appoinment2.jpg" alt="Appointment" style="width: 100%;"/>
+    <p align="center">Appointment</p>
+  </div>
+
+  <div style="flex-basis: 30%;">
+    <img src="screenshot/pulseCareSS/aiChat.jpg" alt="AI Chat" style="width: 100%;"/>
+    <p align="center">AI Chat</p>
+  </div>
+
+  <div style="flex-basis: 30%;">
+    <img src="screenshot/pulseCareSS/feedback.jpg" alt="Feedback" style="width: 100%;"/>
+    <p align="center">Feedback</p>
+  </div>
+
+</div>
