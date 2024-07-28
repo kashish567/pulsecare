@@ -14,61 +14,61 @@ This application aims to enhance the healthcare experience by making it more eff
 
 ## Application Screenshots
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
 
-  <div style="flex-basis: 30%;">
+  <div style="flex: 1 1 30%; margin: 10px;">
     <img src="screenshot/pulseCareSS/welcome.jpg" alt="Welcome Screen" height="300" width="150"/>
     <p align="center">Welcome Screen</p>
   </div>
   
-  <div style="flex-basis: 30%;">
+  <div style="flex: 1 1 30%; margin: 10px;">
     <img src="screenshot/pulseCareSS/userReg.jpg" alt="User Registration" height="300" width="150"/>
     <p align="center">User Registration</p>
   </div>
 
-  <div style="flex-basis: 30%;">
+  <div style="flex: 1 1 30%; margin: 10px;">
     <img src="screenshot/pulseCareSS/login.jpg" alt="Login Screen" height="300" width="150"/>
     <p align="center">Login Screen</p>
   </div>
 
-  <div style="flex-basis: 30%;">
+  <div style="flex: 1 1 30%; margin: 10px;">
     <img src="screenshot/pulseCareSS/homePage.jpg" alt="Home Page" height="300" width="150"/>
     <p align="center">Home Page</p>
   </div>
 
-  <div style="flex-basis: 30%;">
+  <div style="flex: 1 1 30%; margin: 10px;">
     <img src="screenshot/pulseCareSS/updateProfile1.jpg" alt="Update Profile" height="300" width="150"/>
     <p align="center">Update Profile</p>
   </div>
 
-  <div style="flex-basis: 30%;">
+  <div style="flex: 1 1 30%; margin: 10px;">
     <img src="screenshot/pulseCareSS/mapMain.jpg" alt="Map Main" height="300" width="150"/>
     <p align="center">Map Main</p>
   </div>
 
-  <div style="flex-basis: 30%;">
+  <div style="flex: 1 1 30%; margin: 10px;">
     <img src="screenshot/pulseCareSS/doctorList.jpg" alt="Doctor List" height="300" width="150"/>
     <p align="center">Doctor List</p>
   </div>
 
-  <div style="flex-basis: 30%;">
+  <div style="flex: 1 1 30%; margin: 10px;">
     <img src="screenshot/pulseCareSS/doctorDetails.jpg" alt="Doctor Details" height="300" width="150"/>
     <p align="center">Doctor Details</p>
   </div>
 
-  <div style="flex-basis: 30%;">
+  <div style="flex: 1 1 30%; margin: 10px;">
     <img src="screenshot/pulseCareSS/appoinment2.jpg" alt="Appointment" height="300" width="150"/>
     <p align="center">Appointment</p>
   </div>
 
-  <div style="flex-basis: 30%;">
+  <div style="flex: 1 1 30%; margin: 10px;">
     <img src="screenshot/pulseCareSS/aiChat.jpg" alt="AI Chat" height="300" width="150"/>
     <p align="center">AI Chat</p>
   </div>
 
-  <div style="flex-basis: 30%;">
-    <img src="screenshot/pulseCareSS/feedback.jpg" alt="Feedback" height="300" width="150"/>
+  <div style="flex: 1 1 30%; margin: 10px;">
+    <img src="screenshot/pulseCareSS/feedback.jpg" alt="AI Chat" height="300" width="150"/>
     <p align="center">Feedback</p>
   </div>
 
-</div>
+  </div>
