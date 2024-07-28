@@ -1,4 +1,15 @@
-In the current era, healthcare services are increasingly leveraging digital platforms to provide convenient and accessible solutions to patients.
-This app presents the development and implementation of a comprehensive healthcare application designed to streamline various aspects of medical care. 
-The application integrates features such as appointment booking for video consultations, prescription scanning for text conversion, location-based services using Google Maps, 
-and personalized recommendations based on user feedback. Additionally, an AI-powered chatbot is incorporated to offer immediate assistance and support to users. 
+# Healthcare Application
+
+In the current era, healthcare services are increasingly leveraging digital platforms to provide convenient and accessible solutions to patients. This application presents the development and implementation of a comprehensive healthcare platform designed to streamline various aspects of medical care.
+
+## Key Features
+
+- **Appointment Booking**: Easily schedule video consultations with healthcare providers.
+- **Prescription Scanning**: Convert prescriptions into text format for easy reference and record-keeping.
+- **Location-Based Services**: Utilize Google Maps integration to find nearby healthcare facilities and services.
+- **Personalized Recommendations**: Receive tailored suggestions based on user feedback and preferences.
+- **AI-Powered Chatbot**: Get immediate assistance and support through an intelligent chatbot.
+
+This application aims to enhance the healthcare experience by making it more efficient and user-friendly.
+
+![Home Screen](screenshots/pulseCareSS/welcome.jpg)
