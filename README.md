@@ -15,9 +15,9 @@ This application aims to enhance the healthcare experience by making it more eff
 ## Application Screenshots
 
 <p align="center">
-  <img src="screenshot/pulseCareSS/welcome.jpg" alt="Welcome Screen" height="300" width="150"/>
-  <img src="screenshot/pulseCareSS/userReg.jpg" alt="User Registration" height="300" width="150"/>
-  <img src="screenshot/pulseCareSS/login.jpg" alt="Login Screen" height="300" width="150"/>
+  <img src="screenshot/pulseCareSS/welcome.jpg" alt="Welcome Screen" height="300" width="150" style="padding:5px"/>
+  <img src="screenshot/pulseCareSS/userReg.jpg" alt="User Registration" height="300" width="150" style="padding:5px" />
+  <img src="screenshot/pulseCareSS/login.jpg" alt="Login Screen" height="300" width="150" style="padding:5px"/>
 </p>
 <p align="center">
   Welcome Screen | User Registration | Login Screen
